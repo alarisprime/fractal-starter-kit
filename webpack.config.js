@@ -10,11 +10,10 @@ const baseConfig = {
 		filename: '[name].bundle.js'
 	},
 	module: {
-		preLoaders: [],
-		loaders: [
+		rules: [
 			{
 				test: /\.js$/,
-				loaders: ['babel-loader']
+				use: ['babel-loader']
 			}
 		]
 	},
@@ -26,8 +25,8 @@ devConfig.devtool = '#inline-source-map';
 
 const prodConfig = Object.assign({}, baseConfig);
 prodConfig.plugins = prodConfig.plugins.concat([
-	new webpack.optimize.DedupePlugin(),
 	new webpack.optimize.UglifyJsPlugin({
+		sourceMap: true,
 		compress: {
 			screw_ie8: true, // eslint-disable-line camelcase
 			warnings: true

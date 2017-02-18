@@ -40,7 +40,7 @@
     "sanitize.css": "^4.1.0",
     "sass-json-export": "^2.0.0",
     "spinthatshit": "^1.0.3",
-    "webpack": "^1.14.0"
+    "webpack": "^2.2.1"
   },
   "xo": {
     "envs": [

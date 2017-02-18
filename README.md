@@ -15,7 +15,7 @@ When ready to deploy production, create production ready CSS & JS files using `$
 ## What’s Inside
 
 - [Fractal](http://fractal.build) - tool to help you build and document web component libraries.
-- [Webpack](http://webpack.js.org) + [Babel](https://babeljs.io) with [ES6](https://babeljs.io/docs/plugins/preset-es2015/) 
+- [Webpack](http://webpack.js.org) + [Babel](https://babeljs.io) with [ES6](https://babeljs.io/docs/plugins/preset-es2015/) and [Stage 3](https://babeljs.io/docs/plugins/preset-stage-3/)
 - Lints SCSS using [sass-lint](https://github.com/sasstools/sass-lint) and JavaScript using [xo](https://github.com/sindresorhus/xo)
 - [Autoprefixer](https://github.com/postcss/autoprefixer)
 - [Gulp.js](http://gulpjs.com)

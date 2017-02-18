@@ -19,3 +19,6 @@ $sizing-ratio-root: $minor-third; // From Bourbon = 1.2
 // Configuring Bourbon
 $em-base: $font-size-px-root * 1px;
 $modular-scale-ratio: $sizing-ratio-root;
+
+// TODO: Enable Deprecation warning once upgraded to Bourbon 5.0
+$output-bourbon-deprecation-warnings: false;

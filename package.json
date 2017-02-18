@@ -4,7 +4,8 @@
   "scripts": {
     "start": "gulp dev",
     "build": "gulp",
-    "qgen": "qgen"
+    "qgen": "qgen",
+    "test": "yarn build"
   },
   "private": true,
   "license": "MIT",

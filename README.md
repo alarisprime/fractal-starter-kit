@@ -1,29 +1,26 @@
 # Fractal Starter Kit
 
-## Development
+## Getting Started
 
-### Setting up
+[Download Zip](https://github.com/alarisprime/fractal-starter-kit/archive/master.zip) or check out this repo.
 
 ```bash
 $ yarn install # or $ npm install
-```
 
-### Development
-
-Starts development server and watch tasks.
-
-```bash
 $ yarn start # or $ npm start
 ```
 
-### Building
+When ready to deploy production, create production ready CSS & JS files using `$ yarn build # or npm run build`
 
-# Builds the style guide into '/dist' folder.
+## What’s Inside
 
-```bash
-$ yarn build # or npm run build
-```
+- [Fractal](http://fractal.build) - tool to help you build and document web component libraries.
+- [Webpack](http://webpack.js.org) + [Babel](https://babeljs.io) with [ES6](https://babeljs.io/docs/plugins/preset-es2015/) 
+- Lints SCSS using [sass-lint](https://github.com/sasstools/sass-lint) and JavaScript using [xo](https://github.com/sindresorhus/xo)
+- [Autoprefixer](https://github.com/postcss/autoprefixer)
+- [Gulp.js](http://gulpjs.com)
+- Icons as [one SVG file](https://github.com/w0rm/gulp-svgstore) using `<symbol>` elements
 
-## Using it on Production
+## License
 
-Refer to the article on (/docs/using-on-production/)
+MIT © Alaris Prime, LLC

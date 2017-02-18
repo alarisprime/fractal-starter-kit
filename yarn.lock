@@ -6,13 +6,13 @@
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@allmarkedup/fang/-/fang-1.0.0.tgz#20aa2ea365c57b0a28e6b563613270f5630d6883"
 
-"@frctl/fractal@^1.0.0", "@frctl/fractal@^1.0.11", "@frctl/fractal@^1.0.5":
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/@frctl/fractal/-/fractal-1.0.11.tgz#a11b97a4f967312147da6f32baeacb15478fe74c"
+"@frctl/fractal@^1.0.0", "@frctl/fractal@^1.1.0-alpha.0", "@frctl/fractal@^1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@frctl/fractal/-/fractal-1.1.3.tgz#be116c1b55a02746847d5b4cf1e76d36cf6ff458"
   dependencies:
     "@allmarkedup/fang" "^1.0.0"
-    "@frctl/handlebars" "^1.1.2"
-    "@frctl/mandelbrot" "^1.0.7"
+    "@frctl/handlebars" "^1.1.3"
+    "@frctl/mandelbrot" "^1.1.0"
     anymatch "^1.3.0"
     bluebird "^3.4.1"
     browser-sync "^2.14.0"
@@ -49,9 +49,9 @@
     vinyl "^1.2.0"
     vorpal "^1.11.2"
 
-"@frctl/handlebars@^1.1.2":
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/@frctl/handlebars/-/handlebars-1.1.2.tgz#722f295600b9f4d9fa5ad957dec4e6632f08424a"
+"@frctl/handlebars@^1.1.3":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@frctl/handlebars/-/handlebars-1.1.4.tgz#8472988d75f0927dd28cfabd869a38487c652e40"
   dependencies:
     "@frctl/fractal" "^1.0.0"
     bluebird "^3.4.1"
@@ -59,11 +59,11 @@
     lodash "^4.12.0"
     promised-handlebars "^2.0.0"
 
-"@frctl/mandelbrot@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@frctl/mandelbrot/-/mandelbrot-1.0.7.tgz#380d2b8678d60a28ebdd8fd056be6ed98f785439"
+"@frctl/mandelbrot@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@frctl/mandelbrot/-/mandelbrot-1.1.0.tgz#b3aa0870852d0d91b1657cc15d4025bad16ab1f8"
   dependencies:
-    "@frctl/fractal" "^1.0.5"
+    "@frctl/fractal" "^1.1.0-alpha.0"
     js-beautify "^1.6.2"
     lodash "^4.12.0"
 
@@ -5610,13 +5610,13 @@ semver-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/semver-regex/-/semver-regex-1.0.0.tgz#92a4969065f9c70c694753d55248fc68f8f652c9"
 
-"semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@~5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
-
-semver@^4.2.0:
+"semver@2 || 3 || 4 || 5", "semver@2.x || 3.x || 4 || 5", semver@^4.2.0:
   version "4.3.6"
   resolved "https://registry.yarnpkg.com/semver/-/semver-4.3.6.tgz#300bc6e0e86374f7ba61068b5b1ecd57fc6532da"
+
+semver@^5.0.3, semver@^5.1.0, semver@^5.3.0, semver@~5.3.0:
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
 
 send@0.14.1:
   version "0.14.1"

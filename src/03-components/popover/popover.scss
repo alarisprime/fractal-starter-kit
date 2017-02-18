@@ -1,0 +1,67 @@
+$color-background-popover: color('white');
+$border-popover: $border;
+
+.popover__target {
+  display: block;
+}
+
+.popover__content {
+  position: absolute;
+  top: 100%;
+  top: calc(100% + (#{$space-xs}));
+  left: 0;
+  z-index: $z-index-popover;
+  display: none;
+  max-width: $size-xl;
+  min-width: $size-m;
+  padding: $space-xs;
+  margin-top: 0;
+  line-height: $line-height;
+  text-align: left;
+  background-color: $color-background-popover;
+  // border: $border-popover;
+  border-radius: $border-radius;
+  box-shadow: $shadow-high;
+}
+
+.popover {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+.popover--align-right {
+  .popover__content {
+    right: 0;
+    left: auto;
+  }
+}
+
+.popover--open {
+  .popover__content {
+    display: block;
+  }
+}
+
+.popover--no-padding {
+  .popover__content {
+    padding: 0;
+  }
+}
+
+
+.popover--size-l {
+  .popover__content {
+    width: $size-l;
+    height: $size-l;
+    overflow: hidden;
+  }
+}
+
+.popover--inline {
+  display: inline-block;
+
+  .popover__target {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,43 @@
+.caret {
+  position: relative;
+  top: $size-caret / 4;
+  display: inline-block;
+  width: $size-caret;
+  height: $size-caret;
+}
+
+.caret--down,
+.caret--left,
+.caret--up,
+.caret--right {
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: ' ';
+  }
+}
+
+.caret--down {
+  &::after {
+    @include triangle($size-caret, currentColor, down);
+  }
+}
+
+.caret--left {
+  &::after {
+    @include triangle($size-caret, currentColor, left);
+  }
+}
+
+.caret--up {
+  &::after {
+    @include triangle($size-caret, currentColor, up);
+  }
+}
+
+.caret--right {
+  &::after {
+    @include triangle($size-caret, currentColor, right);
+  }
+}

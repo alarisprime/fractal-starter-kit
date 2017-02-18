@@ -1,0 +1,10 @@
+.floating-counter {
+  position: relative;
+  display: inline-block;
+}
+
+.floating-counter__counter {
+  position: absolute;
+  top: -1 * $space-s;
+  right: -1 * $space-s;
+}

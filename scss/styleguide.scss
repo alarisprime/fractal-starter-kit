@@ -1,0 +1,145 @@
+@import 'config.vendor';
+@import 'config.project';
+
+@import './lib/**/*.scss';
+
+@import 'styleguide.tools.scaffolding.scss';
+
+html {
+  height: 100%;
+}
+
+.sg-wrapper {
+  margin: 0;
+}
+
+.sg-reset-bg {
+  background-color: color('white');
+}
+
+.sg-bg-dark {
+  background-color: color('grey-shade-80');
+}
+
+//
+// doc-space
+//
+
+.sg-doc-space {
+  padding: $space-s;
+}
+
+.sg-doc-space--large {
+  padding: $space-m;
+}
+
+.sg-doc-space--xlarge {
+  padding: 3 * $space-m;
+}
+
+//
+// sized-blocks
+//
+
+.sg-block {
+  height: $size-l;
+  overflow: hidden;
+}
+
+//
+// Fonts
+//
+
+// .sg-fonts {}
+
+.sg-font-size__text {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sg-font-size__title {
+  margin: 0 0 $space-m;
+  color: color('text-light');
+}
+
+//
+// Colour Palettes
+//
+
+.sg-colors {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.sg-swatch,
+.sg-swatch__color {
+  border-radius: $border-radius;
+}
+
+.sg-swatch {
+  width: $size-s;
+  padding: $space-xs;
+  margin: $space-xs;
+  border: 1px solid color('border');
+}
+
+.sg-swatch__color {
+  display: block;
+  width: 100%;
+  padding-top: 100% / $sizing-ratio;
+  content: ' ';
+  box-shadow: inset 0 0 3px 1px transparentize(color('black'), .8);
+}
+
+.sg-swatch__title,
+.sg-swatch__code {
+  margin: 0;
+}
+
+.sg-swatch__title {
+  font-size: modular-scale(0);
+}
+
+.sg-swatch__code {
+  font-size: modular-scale(-1);
+  color: color('text-light');
+}
+
+// Table
+.sg-table {
+  width: 100%;
+  border-top: 1px solid color('border');
+
+  td {
+    padding: $space-xs;
+    border-bottom: 1px solid color('border');
+  }
+}
+
+//
+// Icons
+//
+
+// .sg-icon-list {}
+.sg-icon {
+  .icon {
+    margin-right: $space-m;
+  }
+}
+
+// Dummy block
+.dummy {
+  @include to-uppercase;
+  display: block;
+  width: 100%;
+  padding: $space-m;
+  margin: 0;
+  text-align: center;
+  background-color: transparentize-color(color('black'), .9);
+  border: $border;
+  border-radius: $border-radius;
+}

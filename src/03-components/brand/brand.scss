@@ -1,0 +1,42 @@
+.brand {
+  display: inline-block;
+  width: 100%; // To make the ellipsis work
+
+  text-decoration: none;
+}
+
+.brand__logo,
+.brand__name {
+  display: inline-block;
+  margin-top: 0;
+  vertical-align: middle;
+}
+
+.brand__logo-img {
+  display: block;
+  max-height: $size-xxs;
+}
+
+.brand__name {
+  @include ellipsis;
+  font-size: modular-scale(1);
+  font-weight: $font-weight-bold;
+  line-height: $line-height;
+
+  @include bp(medium) {
+    font-size: modular-scale(3);
+    line-height: $line-height-heading;
+  }
+
+  @include bp(large) {
+    font-size: modular-scale(5);
+  }
+}
+
+.brand__logo + .brand__name {
+  margin-left: 0;
+
+  @include bp(medium) {
+    margin-left: $space-s;
+  }
+}

@@ -1,0 +1,11 @@
+// Transparentize Color
+// ----
+/// Mix a color with `white` to get a lighter tint.
+/// Works only with Oddbird's accoutrement-color
+// https://github.com/oddbird/accoutrement-color
+
+@function transparentize-color ($color, $amount) {
+  $color: color($color);
+
+  @return transparentize($color, $amount);
+}

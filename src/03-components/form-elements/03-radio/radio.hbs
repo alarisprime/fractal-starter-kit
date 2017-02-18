@@ -1,0 +1,14 @@
+<fieldset class="form-element">
+  <legend class="form-element__legend form-element__label">{{legend}}</legend>
+  {{#each radios}}
+    <div class="form-element__control">
+      <span class="radio">
+        <input type="radio" id="radio-{{id}}" name="{{../formName}}" {{#if checked}}checked{{/if}}>
+        <label class="radio__label" for="radio-{{id}}">
+          <span class="radio--faux"></span>
+          <span class="form-element__label">{{label}}</span>
+        </label>
+      </span>
+    </div>
+  {{/each}}
+</fieldset>

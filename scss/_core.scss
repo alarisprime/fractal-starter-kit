@@ -1,0 +1,165 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font: #{($font-size-px-root / 16) * 100%}#{'/'}#{$line-height-px-root / $font-size-px-root} $font-family;
+  color: color('text');
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+blockquote,
+figure,
+table,
+ul {
+  margin: 0;
+}
+
+body {
+  min-height: 100%;
+  background-color: color('background');
+
+  // Refer 'Margins' in the article http://www.heydonworks.com/article/on-writing-less-damn-code
+  * + * {
+    margin-top: $space-m;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
+}
+
+h1 {
+  font-size: modular-scale(2);
+}
+
+h2 {
+  // margin-bottom: $space-xs;
+  font-size: modular-scale(1);
+}
+
+// h3,
+// h4 {
+//   margin-bottom: 0;
+// }
+
+h3 {
+  font-size: modular-scale(1);
+  font-weight: $font-weight-regular;
+}
+
+h4 {
+  font-size: modular-scale(0);
+  font-style: italic;
+  font-weight: $font-weight-regular;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-family-mono;
+  font-size: .866666667em; // 13px / 15px to get a similar x-height as the body text.
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  font-size: modular-scale(-1);
+  line-height: $line-height-small;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+a {
+  color: color('link');
+  text-decoration: none;
+
+  @include link-pseudo-classes {
+    color: color('link-hover');
+    text-decoration: underline;
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  -webkit-appearance: none;
+
+  &,
+  &:focus {
+    outline: none;
+  }
+}
+
+input,
+textarea,
+select {
+  padding: 0 $space-xs;
+  font-size: modular-scale(0) * 1.066666667; // 15px → 16px. To avoid zooming in on iOS devices
+  line-height: $line-height;
+  border: $border-input;
+  border-radius: $border-radius;
+  transition: border $duration-quickly $easing-linear, box-shadow $duration-quickly $easing-linear;
+
+  &:focus {
+    border-color: color('accent');
+    box-shadow: 0 0 3px color('accent-hover');
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: color('background');
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+input {
+  line-height: ($space-xs + $line-height);
+}
+
+textarea {
+  padding-top: $space-xs;
+  padding-bottom: $space-xs;
+  line-height: $line-height;
+}
+
+select {
+  height: ($space-xs + $line-height);
+  line-height: ($space-xs + $line-height);
+  color: color('text');
+}
+
+$background-color-mark: color('accent-light');
+
+mark {
+  color: color('text');
+  text-shadow: 1px 1px color('white');
+  background-color: $background-color-mark;
+  box-shadow: 0 0 0 1px $background-color-mark;
+}
+
+%feed-title {
+  font-size: modular-scale(2);
+  line-height: $line-height-heading;
+  color: color('text');
+}

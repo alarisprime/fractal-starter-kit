@@ -1,0 +1,149 @@
+.form-element {
+  > * + * {
+    margin-top: 0;
+  }
+
+  & + &  {
+    margin-top: $space-s;
+
+    @include bp(large) {
+      margin-top: $space-m;
+    }
+  }
+
+  .required {
+    border-bottom: 0;
+  }
+}
+
+// .form-element__control {}
+
+.form-element__label {
+  margin-right: $space-xs;
+  font-size: modular-scale(-1);
+  line-height: $line-height-small;
+  color: color('text-light');
+}
+
+.form-element__help {
+  margin-top: $space-xs;
+  font-size: modular-scale(-1);
+  line-height: $line-height-small;
+  color: color('text-light');
+}
+
+.form-element__static {
+  padding: $space-xs 0;
+  border-bottom: $border-input;
+}
+
+.form-element__help--align-right {
+  text-align: right;
+}
+
+.has-error {
+  .form-element__help {
+    color: color('danger');
+  }
+
+  .input,
+  .textarea,
+  .select {
+    box-shadow: inset 0 0 0 2px color('danger');
+
+    &:focus {
+      border-color: color('danger');
+      box-shadow: 0 0 3px shade(color('danger'), 15%), inset 0 0 0 2px color('danger');
+    }
+  }
+}
+
+.form {
+  padding: $space-xs;
+}
+
+// .form--stacked {}
+.form--horizontal {
+  @include bp(large) {
+    text-align: right;
+  }
+
+  .form-element {
+    > .form-element__label,
+    > .form-element__legend {
+      @include bp(large) {
+        position: relative;
+        top: $space-xs;
+        display: inline-block;
+        float: left;
+        width: percentage(1 / ($sizing-ratio * 3));
+        padding-right: $space-xs;
+        margin-right: 0;
+        margin-bottom: 0;
+        font-size: modular-scale(0);
+        line-height: $line-height;
+        text-align: right;
+        vertical-align: top;
+      }
+    }
+
+    > .form-element__legend {
+      @include bp(large) {
+        top: 0;
+      }
+    }
+
+    // .radio-button-group,
+    // .checkbox-button-group {
+    //   @include bp(large) {
+    //     position: relative;
+    //     top: -1 * $space-xs;
+    //   }
+    // }
+
+    .form-element__control {
+      width: 100%;
+
+      @include bp(large) {
+        display: inline-block;
+        width: percentage(1 - 1 / ($sizing-ratio * 3));
+        padding-left: $space-xs;
+        text-align: left;
+      }
+    }
+  }
+
+  .form-footer {
+    @include bp(large) {
+      justify-content: flex-start;
+      padding-left: percentage(1 / ($sizing-ratio * 3));
+    }
+  }
+}
+
+.form--inline {
+  .form-element,
+  .form-element__label,
+  .form-element__control {
+    display: block;
+
+    @include bp(medium) {
+      display: inline-block;
+
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .form-element {
+    @include bp(medium) {
+      margin-right: $space-s;
+    }
+
+    & + .form-element {
+      @include bp(medium) {
+        margin-top: auto;
+      }
+    }
+  }
+}

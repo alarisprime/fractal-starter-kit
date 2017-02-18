@@ -1,0 +1,9 @@
+@import 'config.vendor';
+@import 'config.project';
+@import 'config.vendor-styles';
+
+@import './lib/**/*.scss';
+
+@import 'core';
+
+@import '../src/**/*.scss';

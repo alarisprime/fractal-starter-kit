@@ -1,0 +1,18 @@
+<nav aria-label="You are here:" role="navigation">
+  <ul class="breadcrumbs{{#each modifiers}} breadcrumbs--{{this}}{{/each}}">
+    {{#each parents}}
+      {{#if title}}
+        <li>
+          {{#if to}}
+            <a class="link" href="{{to}}">{{title}}</a>
+          {{else}}
+            <span>{{title}}</span>
+          {{/if}}
+        </li>
+      {{/if}}
+    {{/each}}
+    {{#if title}}
+      <li><span class="visibility-assistive-text">Current: </span> {{title}}</li>
+    {{/if}}
+  </ul>
+</nav>

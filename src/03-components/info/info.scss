@@ -1,0 +1,68 @@
+.info {
+  @include clearfix;
+  color: color('text');
+}
+
+.info__label,
+.info__content {
+  margin-top: 0;
+}
+
+.info__label {
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-regular;
+  line-height: $line-height-small;
+  color: color('text-light');
+}
+
+.info--primary {
+  color: color('accent');
+
+  .info__content {
+    @include bp(medium) {
+      padding-bottom: $space-m;
+    }
+
+    @include bp(large) {
+      padding-bottom: $space-l;
+    }
+  }
+}
+
+.info--light {
+  color: color('text-light');
+}
+
+.info--danger {
+  color: color('danger');
+}
+
+.info--success {
+  color: color('success');
+}
+
+.info--warning {
+  color: color('warning');
+}
+
+.info--emphasis {
+  .info__content {
+    font-size: modular-scale(1);
+    font-weight: $font-weight-bold;
+    line-height: $line-height-heading;
+  }
+}
+
+.info--fuse {
+  .info__content,
+  .info__label {
+    display: inline;
+  }
+
+  .info__label {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+  }
+}

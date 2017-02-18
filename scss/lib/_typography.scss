@@ -1,0 +1,16 @@
+@mixin to-uppercase($current-font-size: 1em, $letter-spacing: .3) {
+  font-size: $current-font-size * .80952381;
+  letter-spacing: rem($letter-spacing);
+  text-transform: uppercase;
+}
+
+@mixin to-lowercase {
+  text-transform: lowercase;
+}
+
+@mixin right-arrow($space-before: $space-xs) {
+  &::after {
+    padding-left: $space-before;
+    content: '\2192'; // →
+  }
+}

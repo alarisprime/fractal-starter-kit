@@ -1,0 +1,13 @@
+<nav class="pagination{{#each modifiers}} pagination--{{this}}{{/each}}" aria-label="Page navigation">
+  <ul class="pagination__list">
+    <li class="pagination__item pagination__item--previous pagination__item--disabled"><span aria-label="Previous">Previous</span></li>
+    {{#times pages}}
+      {{#if @index}}
+        <li class="pagination__item"><a href="#{{increment @index}}">{{increment @index}}</a></li>
+      {{else}}
+        <li class="pagination__item pagination__item--active"><a href="#{{increment @index}}"><span class="visibility-assistive-text">Current: </span>{{increment @index}}</a></li>
+      {{/if}}
+    {{/times}}
+    <li class="pagination__item pagination__item--next"><a href="#" aria-label="Next">Next</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,17 @@
+// .link {}
+
+.link--reverse {
+  color: color('link-reverse');
+
+  @include link-pseudo-classes {
+    color: color('link-reverse-hover');
+  }
+}
+
+.link--danger {
+  color: color('danger');
+
+  @include link-pseudo-classes {
+    color: shade(color('danger'), 15%);
+  }
+}

@@ -1,0 +1,29 @@
+@mixin link-pseudo-classes($link: false, $hover: true, $active: true, $focus: true, $visited: false) {
+  $modifiers-list: ();
+
+  @if ($link) {
+    $modifiers-list: append($modifiers-list, '&:link');
+  }
+
+  @if ($hover) {
+    $modifiers-list: append($modifiers-list, '&:hover');
+  }
+
+  @if ($active) {
+    $modifiers-list: append($modifiers-list, '&:active');
+  }
+
+  @if ($focus) {
+    $modifiers-list: append($modifiers-list, '&:focus');
+  }
+
+  @if ($visited) {
+    $modifiers-list: append($modifiers-list, '&:visited');
+  }
+
+  $modifiers: assign-inputs($modifiers-list); // from Bourbon
+
+  #{$modifiers} {
+    @content;
+  }
+}

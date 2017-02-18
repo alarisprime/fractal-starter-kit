@@ -1,0 +1,15 @@
+<span class="pill">
+  <a class="pill__body" href="javascript:;">
+    {{#if typeIcon}}
+      <span class="pill__type-icon">
+        {{> @icon typeIcon}}
+      </span>
+    {{/if}}
+    <span class="pill__label">{{label}}</span>
+  </a>
+  {{#if removeIcon}}
+    <a class="pill__remove" href="javascript:;">
+      {{> @icon removeIcon}}
+    </a>
+  {{/if}}
+</span>

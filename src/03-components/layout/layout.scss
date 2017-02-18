@@ -1,0 +1,132 @@
+.layout {
+  @include clearfix;
+}
+
+.layout__col,
+.layout__col-1,
+.layout__col-2,
+.layout__col-3 {
+  float: left;
+  width: 100%;
+  margin-top: 0;
+}
+
+.layout--2-col {
+  > .layout__col-1,
+  > .layout__col-2 {
+    @include bp(medium) {
+      width: 50%;
+    }
+  }
+
+  > .layout__col-2 {
+    margin-left: 50%;
+  }
+
+  > .layout__col-1 + .layout__col-2 {
+    margin-left: 0;
+  }
+}
+
+.layout--2-col-async {
+  > .layout__col-1 {
+    @include bp(medium) {
+      width: percentage(1 / ($sizing-ratio * 3));
+      clear: left;
+    }
+  }
+
+  > .layout__col-2 {
+    @include bp(medium) {
+      width: percentage(1 - 1 / ($sizing-ratio * 3));
+      margin-left: percentage(1 / ($sizing-ratio * 3));;
+    }
+  }
+
+  > .layout__col-1 + .layout__col-2 {
+    @include bp(medium) {
+      margin-left: 0;
+    }
+  }
+}
+
+.layout--2-col-async-reverse {
+  > .layout__col-1 {
+    @include bp(medium) {
+      width: percentage(1 - 1 / ($sizing-ratio * 3));
+      clear: left;
+    }
+  }
+
+  > .layout__col-2 {
+    @include bp(medium) {
+      width: percentage(1 / ($sizing-ratio * 3));
+    }
+  }
+}
+
+.layout--3-col {
+  > .layout__col-1,
+  > .layout__col-2,
+  > .layout__col-3 {
+    @include bp(medium) {
+      width: percentage(1 / 2);
+    }
+
+    @include bp(large) {
+      width: percentage(1 / 3);
+    }
+  }
+}
+
+.layout--3-col-async {
+  > .layout__col-1 {
+    @include bp(medium) {
+      width: percentage(1 / ($sizing-ratio * 4));
+      clear: left;
+    }
+
+    @include bp(large) {
+      width: percentage(1 / ($sizing-ratio * 5));
+    }
+  }
+
+  > .layout__col-2 {
+    @include bp(medium) {
+      width: percentage(1 - 1 / ($sizing-ratio * 4));
+      padding-right: $space-s;
+    }
+
+    @include bp(large) {
+      width: percentage(1 - (1 / ($sizing-ratio * 3) + 1 / ($sizing-ratio * 5)));
+      padding-right: $space-m;
+    }
+  }
+
+  > .layout__col-3 {
+    @include bp(medium) {
+      width: percentage(1 - 1 / ($sizing-ratio * 4));
+      margin-left: percentage(1 / ($sizing-ratio * 4));
+      clear: left;
+    }
+
+    @include bp(large) {
+      width: percentage(1 / ($sizing-ratio * 3));
+      margin-left: 0;
+      clear: none;
+    }
+  }
+}
+
+.layout--padded {
+  > .layout__col,
+  > .layout__col-1,
+  > .layout__col-2,
+  > .layout__col-3 {
+    padding: $space-xs;
+  }
+}
+
+.layout__col--no-padding {
+  padding: 0;
+}

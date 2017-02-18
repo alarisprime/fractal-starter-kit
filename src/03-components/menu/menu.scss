@@ -1,0 +1,87 @@
+.menu {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu__item {
+  margin-top: 0;
+}
+
+.menu__item-link {
+  display: block;
+  padding: $space-xs 0;
+  text-decoration: none;
+
+  @include link-pseudo-classes {
+    text-decoration: none;
+  }
+
+  .icon {
+    vertical-align: bottom;
+  }
+}
+
+.menu__item-label {
+  margin-top: 0;
+}
+
+.menu__item-subtitle {
+  display: block;
+  margin-top: $space-xs;
+  font-size: modular-scale(-1);
+  line-height: $line-height-small;
+  color: color('text-light');
+}
+
+.menu__item-extra-info {
+  font-size: modular-scale(-1);
+  font-weight: $font-weight-regular;
+  line-height: $line-height-small;
+  color: color('text-light');
+
+  &::before {
+    margin: 0 $space-xs;
+    content: '#{$char-mid-dot}';
+  }
+}
+
+.menu__separator {
+  display: block;
+  height: $border-width;
+  margin: $space-xs 0;
+  background-color: $border-color;
+  border: 0;
+}
+
+.menu--horizontal {
+  display: flex;
+  align-items: stretch;
+
+  .menu__item-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    padding-right: $space-s;
+    padding-left: $space-s;
+  }
+
+  > .menu__separator {
+    width: $border-width;
+    height: auto;
+    margin: 0 $space-xs;
+  }
+}
+
+.menu--hide-labels-on-small {
+  .menu__item-label {
+    display: none;
+
+    @include bp(medium) {
+      display: inline;
+    }
+  }
+}

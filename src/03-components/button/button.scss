@@ -1,0 +1,171 @@
+$height-button: rem(36px);
+$height-button-small: rem(24px);
+$min-width-button: $size-xs;
+$min-width-button-primary: $size-s;
+$min-width-button-small: $size-xxs;
+$shadow-length-button: 2px;
+$color-shadow-button: color('grey-tint-70');
+
+@mixin button-color-variant(
+  $color-text: color('accent'),
+  $color-text-hover: color('accent-hover'),
+  $color-background: color('grey-tint-90'),
+  $color-shadow: $color-shadow-button,
+  $shadow-length: $shadow-length-button
+) {
+  margin-bottom: $shadow-length;
+  color: $color-text;
+  background-color: $color-background;
+  box-shadow: 0 $shadow-length $color-shadow;
+
+  &:hover,
+  &:focus {
+    color: $color-text-hover;
+  }
+
+  &:active {
+    transform: translateY($shadow-length / 2);
+    box-shadow: inset 0 ($shadow-length / 2) $color-shadow;
+  }
+}
+
+%button-structure {
+  min-width: $min-width-button;
+  padding: 0 $space-m;
+  line-height: $height-button;
+  border-radius: $border-radius-semi-circle;
+}
+
+.button {
+  @extend %button-structure;
+  display: inline-block;
+  margin-top: 0;
+  font-weight: normal;
+  color: color('accent');
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  user-select: none;
+  touch-action: manipulation;
+
+  @include link-pseudo-classes {
+    color: color('accent-hover');
+    text-decoration: none;
+  }
+
+  & + & {
+    margin-left: $space-xs;
+  }
+}
+
+.button--neutral {
+  @extend %button-structure;
+  @include button-color-variant;
+}
+
+.button--primary {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('white'),
+    $color-text-hover: color('white'),
+    $color-background: color('accent'),
+    $color-shadow: color('accent-hover')
+  );
+
+  min-width: $min-width-button-primary;
+}
+
+.button--success {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('white'),
+    $color-text-hover: color('white'),
+    $color-background: color('success'),
+    $color-shadow: shade(color('success'), 15%)
+  );
+}
+
+.button--danger {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('white'),
+    $color-text-hover: color('white'),
+    $color-background: color('danger'),
+    $color-shadow: shade(color('danger'), 15%)
+  );
+}
+
+.button--info {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('white'),
+    $color-text-hover: color('white'),
+    $color-background: color('info'),
+    $color-shadow: shade(color('info'), 15%)
+  );
+}
+
+.button--warning {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('white'),
+    $color-text-hover: color('white'),
+    $color-background: color('warning'),
+    $color-shadow: shade(color('warning'), 15%)
+  );
+}
+
+.button--disabled {
+  @extend %button-structure;
+  @include button-color-variant(
+    $color-text: color('grey-tint-10'),
+    $color-text-hover: color('grey-tint-10'),
+    $color-background: color('grey-tint-80')
+  );
+  cursor: not-allowed;
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: translateY($shadow-length-button / 2);
+    box-shadow: 0 $shadow-length-button $color-shadow-button;
+  }
+}
+
+.button--small {
+  min-width: $min-width-button-small;
+  padding-right: $space-s;
+  padding-left: $space-s;
+  font-size: 1rem * strip-units(modular-scale(-1));
+  line-height: $height-button-small;
+}
+
+.button--full-width {
+  display: block;
+
+  .button + & {
+    margin-left: 0;
+  }
+}
+
+.button--medium-full-width {
+  @include bp(medium) {
+    display: block;
+  }
+
+  .button + & {
+    @include bp(medium) {
+      margin-left: 0;
+    }
+  }
+}
+
+.button--flat {
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+

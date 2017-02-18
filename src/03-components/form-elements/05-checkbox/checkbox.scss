@@ -1,0 +1,77 @@
+$size-checkbox-faux: rem(16);
+
+.checkbox__label {
+  margin-top: 0;
+
+  .form-element__label {
+    font-size: modular-scale(0);
+    line-height: $line-height;
+    color: color('text');
+  }
+}
+
+%checkbox-check {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: ($size-checkbox-faux + rem(4)) / 2;
+  height: ($size-checkbox-faux + rem(4)) / 4;
+  background-color: transparent;
+  border: 2px $border-style color('accent');
+  border-top-width: 0;
+  border-right-width: 0;
+  content: '';
+  transform: translate3d(-50%, -50% , 0) rotate(-45deg);
+}
+
+.checkbox {
+  // Cascaded to avoid conflict with checkbox-alternate's styles
+  .checkbox--faux {
+    position: relative;
+    display: inline-block;
+    width: $size-checkbox-faux;
+    height: $size-checkbox-faux;
+    margin-top: -1 * rem(4);
+    vertical-align: middle;
+    background: color('white');
+    border: $border-input;
+    border-radius: $border-radius;
+    transition: border $duration-quickly $easing-linear, background-color $duration-quickly $easing-linear;
+  }
+
+  [type='checkbox'] {
+    @extend %hide-visually;
+
+    &:checked + .checkbox--faux,
+    &:checked ~ .checkbox--faux {
+      &::after {
+        @extend %checkbox-check;
+      }
+    }
+
+    &:checked + .checkbox__label {
+      .checkbox--faux {
+        &::after {
+          @extend %checkbox-check;
+        }
+      }
+    }
+
+    &:disabled + .checkbox--faux,
+    &:disabled ~ .checkbox--faux {
+      background-color: color('background');
+    }
+
+    &:disabled + .checkbox__label {
+      .checkbox--faux {
+        background-color: color('background');
+      }
+    }
+  }
+}
+
+.has-error {
+  .checkbox--faux {
+    border-color: color('danger');
+  }
+}

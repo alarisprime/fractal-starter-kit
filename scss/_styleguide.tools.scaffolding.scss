@@ -1,0 +1,20 @@
+// This includes code to generate data for color palettes and type sizes.
+
+
+$type-sizes: ();
+@for $i from $steps-above-font-size through 1 {
+  $type-sizes: map-merge($type-sizes, ('#{$i}': modular-scale($i)));
+}
+$type-sizes: map-merge($type-sizes, ('0': modular-scale(0)));
+@for $i from 1 through $steps-below-font-size {
+  $type-sizes: map-merge($type-sizes, ('-#{$i}': modular-scale($i * -1)));
+}
+
+$config: (
+  'colors': map-compile($colors, 'color'),
+  'fontSizes': $type-sizes,
+  'breakpoints': $breakpoints
+);
+
+// Expose setting data to front JS
+@include json-encode($config);

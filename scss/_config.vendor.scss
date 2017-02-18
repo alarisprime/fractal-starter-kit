@@ -1,0 +1,21 @@
+//
+// Vendor mixins and functions
+//
+
+@import 'bourbon/app/assets/stylesheets/bourbon';
+// Accoutrement Color
+// github.com/oddbird/accoutrement-color
+@import 'accoutrement-color/sass/color';
+@import 'accoutrement-herman/sass/herman';
+@import 'sass-json-export/stylesheets/sass-json-export';
+@import 'spinthatshit/src/loaders';
+
+// Root Typographic Settings
+$font-family-root: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+$font-size-px-root: 15; // Don't use units
+$line-height-px-root: 24; // Don't use units
+$sizing-ratio-root: $minor-third; // From Bourbon = 1.2
+
+// Configuring Bourbon
+$em-base: $font-size-px-root * 1px;
+$modular-scale-ratio: $sizing-ratio-root;

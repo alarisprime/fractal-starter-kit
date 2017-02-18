@@ -1,0 +1,9 @@
+<ul class="menu menu--horizontal{{#each modifiers}} menu--{{this}}{{/each}}">
+  {{#each menuItems}}
+    <li class="menu__item"><a class="menu__item-link" href="{{to}}">{{label}}</a></li>
+  {{/each}}
+    <li class="menu__separator"></li>
+  {{#each menuItems}}
+    <li class="menu__item"><a class="menu__item-link" href="{{to}}">{{label}}</a></li>
+  {{/each}}
+</ul>

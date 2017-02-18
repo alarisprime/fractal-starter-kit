@@ -1,0 +1,42 @@
+.media-object {
+  display: flex;
+  align-items: center;
+}
+
+.media-object__figure,
+.media-object__content,
+.media-object__headline,
+.media-object__text {
+  margin-top: 0;
+}
+
+.media-object__figure {
+  flex-shrink: 0;
+  padding-right: $space-s;
+}
+
+.media-object__content {
+  flex: 1;
+}
+
+.media-object__headline {
+  font-size: modular-scale(0);
+  font-weight: $font-weight-regular;
+  line-height: $line-height;
+}
+
+.media-object__text {
+  font-size: modular-scale(-1);
+  line-height: $line-height-small;
+  color: color('text-light');
+}
+
+.media-object--spacious {
+  .media-object__content {
+    padding-left: $space-s;
+  }
+}
+
+.media-object--align-top {
+  align-items: flex-start;
+}

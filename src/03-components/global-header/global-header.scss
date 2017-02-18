@@ -1,0 +1,85 @@
+.global-header {
+  @include container($bg-color: color('brand'));
+
+  .link,
+  .menu__item-link {
+    color: color('white');
+
+    @include link-pseudo-classes {
+      color: color('grey-tint-90');
+    }
+  }
+
+  .menu {
+    & .menu {
+      .menu__item-link {
+        align-items: flex-start;
+        color: color('link');
+
+        @include link-pseudo-classes {
+          color: color('link-hover');
+        }
+      }
+    }
+  }
+}
+
+.global-header__container {
+  @include inner-container($padding: null);
+}
+
+.global-header__primary,
+.global-header__secondary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.global-header__primary {
+  padding: $space-s;
+
+  @include bp(medium) {
+    padding-top: $space-m;
+    padding-bottom: $space-m;
+  }
+}
+
+.global-header__secondary {
+  margin-top: 0;
+  color: color('text-reverse');
+  background-color: color('brand-shade-10');
+}
+
+.global-header__brand {
+  min-width: 0; // Hack for turncating brand title on small screens. Refer: https://css-tricks.com/flexbox-truncated-text/
+}
+
+.global-header__nav {
+  margin-top: 0;
+}
+
+.global-header__scroller {
+  @include enable-smooth-scroll-on-touch;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.global-header__breadcrumbs {
+  padding: $space-xs $space-s;
+}
+
+.global-header__browse-trigger {
+  padding: $space-xs $space-s;
+  margin-top: 0;
+  font-weight: $font-weight-bold;
+  background-color: color('brand-shade-30');
+  box-shadow: (-1 * $space-xxs) 0 0 $color-shadow;
+
+  @include link-pseudo-classes {
+    text-decoration: none;
+  }
+
+  @include bp(medium) {
+    box-shadow: none;
+  }
+}

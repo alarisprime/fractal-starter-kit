@@ -1,0 +1,33 @@
+$breakpoints: (
+  small:   0,
+  medium:  640,
+  large:   1024
+) !default;
+
+$breakpoints-queries: ();
+
+@each $key, $pixels in $breakpoints {
+  $screen-string: 'only screen';
+
+  @if ($pixels == '0') {
+    $breakpoints-queries: map-merge($breakpoints-queries, ($key: '#{$screen-string}'));
+  } @else {
+    $breakpoints-queries: map-merge($breakpoints-queries, ($key: '#{$screen-string} and (min-width: #{em($pixels, 16)})'));
+  }
+}
+
+@mixin breakpoint($media) {
+  @if map-has-key($breakpoints-queries, $media) {
+    @media #{map-get($breakpoints-queries, $media)} {
+      @content;
+    }
+  } @else {
+    @error 'The breakpoint you have provided "#{$media}" is not defined in $breakpoints-queries';
+  }
+}
+
+@mixin bp($media) {
+  @include breakpoint($media) {
+    @content;
+  }
+}

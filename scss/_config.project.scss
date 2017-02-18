@@ -1,0 +1,278 @@
+// ========================
+// Design Tokens
+// ========================
+
+// Notes:
+// With an exception for a few variables defined in _config.vendor.scss, all design tokents has to be defined in this file. Those variables a defined together with inclusion of SCSS frameworks to make Bourbon work properly.
+
+// ---
+// Typography
+// ---
+$font-family:      $font-family-root;
+$font-family-mono: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+$font-size:        $em-base; // 15px
+
+// Line Height
+$line-height:         rem($line-height-px-root);
+$line-height-small:   rem(18);
+$line-height-heading: 1.25;
+
+// Font Size
+$sizing-ratio:          $sizing-ratio-root;
+$steps-above-font-size: 7; //$up steps $font-size will ge generated using $sizing-ratio
+$steps-below-font-size: 2; //$up steps $font-size will ge generated using $sizing-ratio
+
+// Font Weight
+$font-weight-light:   300;
+$font-weight-regular: 400;
+$font-weight-bold:    600;
+
+// ---
+// Space
+// ---
+
+$space-default: $line-height;
+
+$space-xxs: $space-default / 8;
+$space-xs:  $space-default / 4;
+$space-s:   $space-default / 2;
+$space-m:   $space-default;
+$space-l:   $space-default * 2;
+$space-xl:  $space-default * 4;
+$space-xxl: $space-default * 8;
+
+$space-inset-default: $space-default $space-default $space-default $space-default;
+
+$space-inset-xs:  $space-xs  $space-xs  $space-xs  $space-xs;
+$space-inset-s:   $space-s   $space-s   $space-s   $space-s;
+$space-inset-m:   $space-m   $space-m   $space-m   $space-m;
+$space-inset-l:   $space-l   $space-l   $space-l   $space-l;
+$space-inset-xl:  $space-xl  $space-xl  $space-xl  $space-xl;
+$space-inset-xxl: $space-xxl $space-xxl $space-xxl $space-xxl;
+
+// ---
+// Size
+// ---
+
+$size-xxs: $line-height * 2;
+$size-xs:  $line-height * 3;
+$size-s:   $line-height * 5;
+$size-m:   $line-height * 8;
+$size-l:   $line-height * 13;
+$size-xl:  $line-height * 21;
+$size-xxl: $line-height * 34;
+
+// Icons
+$size-icon-small:  18px;
+$size-icon:        24px;
+$size-icon-large:  32px;
+$size-icon-xlarge: 48px;
+$size-icon-mega:   96px;
+
+// Avatar
+$size-avatar-tiny:   rem(24px);
+$size-avatar:        rem(32px);
+$size-avatar-large:  rem(48px);
+$size-avatar-xlarge: rem(96px);
+
+// Caret
+$size-caret: em(8);
+
+// Chevron
+$size-chevron: rem(8);
+$size-chevron-large: rem(14);
+
+// ---
+// Colors
+// ---
+
+$colors: (
+  // Base
+  'brand':  #8a6cdf, // medium purple
+  'accent': #f49450, // sea buckthorn
+  'white':  #ffffff,
+  'black':  #000000,
+  'grey':   #8c8c8c,
+
+  // TODO: remove the colors which are not used
+
+  // brand
+  'brand-shade-10': 'brand' ('shade': 10%),
+  'brand-shade-20': 'brand' ('shade': 20%),
+  'brand-shade-30': 'brand' ('shade': 30%),
+  'brand-shade-40': 'brand' ('shade': 40%),
+  'brand-shade-50': 'brand' ('shade': 50%),
+  'brand-shade-60': 'brand' ('shade': 60%),
+  'brand-shade-70': 'brand' ('shade': 70%),
+  'brand-shade-80': 'brand' ('shade': 80%),
+  'brand-shade-90': 'brand' ('shade': 90%),
+  'brand-tint-10':  'brand' ('tint': 10%),
+  'brand-tint-20':  'brand' ('tint': 20%),
+  'brand-tint-30':  'brand' ('tint': 30%),
+  'brand-tint-40':  'brand' ('tint': 40%),
+  'brand-tint-50':  'brand' ('tint': 50%),
+  'brand-tint-60':  'brand' ('tint': 60%),
+  'brand-tint-70':  'brand' ('tint': 70%),
+  'brand-tint-80':  'brand' ('tint': 80%),
+  'brand-tint-90':  'brand' ('tint': 90%),
+
+  // accent
+  'accent-shade-10': 'accent' ('shade': 10%),
+  'accent-shade-20': 'accent' ('shade': 20%),
+  'accent-shade-30': 'accent' ('shade': 30%),
+  'accent-shade-40': 'accent' ('shade': 40%),
+  'accent-shade-50': 'accent' ('shade': 50%),
+  'accent-shade-60': 'accent' ('shade': 60%),
+  'accent-shade-70': 'accent' ('shade': 70%),
+  'accent-shade-80': 'accent' ('shade': 80%),
+  'accent-shade-90': 'accent' ('shade': 90%),
+  'accent-tint-10':  'accent' ('tint': 10%),
+  'accent-tint-20':  'accent' ('tint': 20%),
+  'accent-tint-30':  'accent' ('tint': 30%),
+  'accent-tint-40':  'accent' ('tint': 40%),
+  'accent-tint-50':  'accent' ('tint': 50%),
+  'accent-tint-60':  'accent' ('tint': 60%),
+  'accent-tint-70':  'accent' ('tint': 70%),
+  'accent-tint-80':  'accent' ('tint': 80%),
+  'accent-tint-90':  'accent' ('tint': 90%),
+
+  // Greys
+  'grey-shade-10': 'grey' ('shade': 10%),
+  'grey-shade-20': 'grey' ('shade': 20%),
+  'grey-shade-30': 'grey' ('shade': 30%),
+  'grey-shade-40': 'grey' ('shade': 40%),
+  'grey-shade-50': 'grey' ('shade': 50%),
+  'grey-shade-60': 'grey' ('shade': 60%),
+  'grey-shade-70': 'grey' ('shade': 70%),
+  'grey-shade-80': 'grey' ('shade': 80%),
+  'grey-shade-90': 'grey' ('shade': 90%),
+  'grey-tint-10':  'grey' ('tint': 10%),
+  'grey-tint-20':  'grey' ('tint': 20%),
+  'grey-tint-30':  'grey' ('tint': 30%),
+  'grey-tint-40':  'grey' ('tint': 40%),
+  'grey-tint-50':  'grey' ('tint': 50%),
+  'grey-tint-60':  'grey' ('tint': 60%),
+  'grey-tint-70':  'grey' ('tint': 70%),
+  'grey-tint-80':  'grey' ('tint': 80%),
+  'grey-tint-90':  'grey' ('tint': 90%),
+  'grey-tint-95':  'grey' ('tint': 95%),
+
+  // Utility
+  'success': #5cb85c,
+  'danger':  #d9534f,
+  'warning': #f0ad4e,
+  'info':    #5bc0de,
+
+  // Social
+  'facebook':    #3b5998,
+  'google-plus': #dd4b39,
+  'twitter':     #1da1f2,
+
+  // Derived
+  'accent-hover':         'accent-shade-30',
+  'accent-light':         'accent-tint-70',
+  'accent-lighter':       'accent-tint-90',
+  'link':                 'brand',
+  'link-hover':           'brand-shade-30',
+  'link-secondary':       'accent',
+  'link-secondary-hover': 'accent-hover',
+  'link-reverse':         'grey-tint-70',
+  'link-reverse-hover':   'grey-tint-50',
+  'text-dark':            'grey-shade-80',
+  'text':                 'grey-shade-60',
+  'text-light':           'grey-tint-10',
+  'text-lighter':         'grey-tint-60',
+  'text-reverse':         'white' ('transparentize-color': .45),
+  'background':           'grey-tint-90',
+  'background-light':     'grey-tint-95',
+  'border':               'grey-tint-70',
+  'border-input':         'grey-tint-60',
+  'overlay':              'brand-shade-10' ('transparentize-color': .05)
+);
+
+// ---
+// Shadow
+// ---
+
+$opacity-shadow: .88;
+$color-shadow: transparentize(color('black'), $opacity-shadow);
+
+$shadow: 0 0 2px transparentize(color('black'), .88), 0 2px 2px transparentize(color('black'), .76);
+$shadow-high: 0 0 4px transparentize(color('black'), .88), 0 4px 4px transparentize(color('black'), .76);
+
+// ---
+// Border
+// ---
+
+$border-width:       1px;
+$border-width-wide:  $space-xxs;
+$border-width-wider: $space-xs;
+
+$border-radius:             rem(3px);
+$border-radius-circle:      50%;
+$border-radius-semi-circle: 2000px;
+
+$border-style: solid;
+
+$border-color:       color('border');
+$border-color-light: color('grey-shade-20');
+
+$border:         $border-width $border-style $border-color;
+$border-wide:    $border-width-wide $border-style $border-color;
+$border-input:   $border-width $border-style color('border-input');
+$border-reverse: $border-width $border-style $border-color-light;
+
+$border-radius-badge: $border-radius;
+
+// Chevron
+$border-width-chevron: rem(3);
+
+// ---
+// Breakpoints
+// ---
+
+$breakpoints: (
+  small:        0,
+  medium-small: 600,
+  medium:       768,
+  large:        1024,
+  xlarge:       1200,
+  xxlarge:      1440
+);
+
+// ---
+// Animation
+// ---
+
+// Time
+$duration-instantly:   0s;
+$duration-immediately: .05s;
+$duration-quickly:     .1s;
+$duration-promptly:    .2s;
+$duration-slowly:      .4s;
+$duration-slide:       .25s;
+
+// Easing
+$easing: ease-in-out;
+$easing-linear: linear;
+
+// ---
+// z-index
+// ---
+
+$z-index-reset:        1;
+$z-index-popover:      10;
+$z-index-search-panel: 50;
+$z-index-results-list: 60;
+
+// ---
+// Layout
+// ---
+
+$max-container-width: $space-m * 48;
+
+// ---
+// Constants
+// ---
+
+$constant-root-2: 1.414213562373095;

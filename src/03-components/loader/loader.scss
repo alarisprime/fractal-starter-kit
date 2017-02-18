@@ -1,0 +1,35 @@
+// The loader is based on https://matejkustec.github.io/SpinThatShit/
+
+$size-loader: $size-icon;
+$size-loader-large: $size-icon-large;
+$size-loader-xlarge: $size-icon-xlarge;
+
+.loader {
+  @include loader05(
+    $size: $size-loader,
+    $color: color('brand'),
+    $border-size: 3px,
+    $duration: .8s);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.loader--large {
+  @include loader05(
+    $size: $size-loader-large,
+    $color: color('brand'),
+    $border-size: 3px,
+    $duration: .8s);
+}
+
+.loader--xlarge {
+  @include loader05(
+    $size: $size-loader-xlarge,
+    $color: color('brand'),
+    $border-size: 3px,
+    $duration: .8s);
+}
+
+.loader--reverse {
+  border-color: color('white');
+}

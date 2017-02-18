@@ -1,0 +1,11 @@
+{{#each options}}
+{{#if children}}
+<optgroup label="{{name}}">
+  {{#each children}}
+  {{> @select-option}}
+  {{/each}}
+</optgroup>
+{{else if value}}
+{{> @select-option}}
+{{/if}}
+{{/each}}

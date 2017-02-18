@@ -1,0 +1,28 @@
+.avatar {
+  display: inline-block;
+  width: $size-avatar;
+  height: $size-avatar;
+  overflow: hidden;
+  vertical-align: middle;
+  border-radius: $border-radius;
+
+  img {
+    display: block;
+  }
+}
+
+.avatar--tiny {
+  width: $size-avatar-tiny;
+  height: $size-avatar-tiny;
+  vertical-align: text-bottom;
+}
+
+.avatar--large {
+  width: $size-avatar-large;
+  height: $size-avatar-large;
+}
+
+.avatar--xlarge {
+  width: $size-avatar-xlarge;
+  height: $size-avatar-xlarge;
+}

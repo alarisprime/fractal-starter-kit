@@ -1,0 +1,17 @@
+<li
+  class="menu__item {{#if active}}menu__item--active{{/if}}"
+  {{#if children.length}}aria-expanded="{{#if active}}true{{else}}false{{/if}}"{{/if}}
+>
+  <a class="menu__item-link" href="{{to}}">
+    {{~#if icon~}}
+      {{~> @icon icon}}
+    {{~/if~}}
+    <span class="menu__item-label">{{label}}</span>
+    {{~#each extraInfo ~}}
+      <span class="menu__item-extra-info">{{this}}</span>
+    {{~/each}}
+    {{~#if subtitle ~}}
+      <span class="menu__item-subtitle">{{subtitle}}</span>
+    {{~/if~}}
+  </a>
+</li>

@@ -1,0 +1,45 @@
+.icon {
+  // position: relative;
+  // top: -1 * em(1.7);
+  display: inline-block;
+
+  width: $size-icon;
+  height: $size-icon;
+  margin-top: 0;
+
+  color: inherit;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.icon--small {
+  width: $size-icon-small;
+  height: $size-icon-small;
+}
+
+.icon--large {
+  width: $size-icon-large;
+  height: $size-icon-large;
+}
+
+.icon--xlarge {
+  width: $size-icon-xlarge;
+  height: $size-icon-xlarge;
+}
+
+.icon--mega {
+  width: $size-icon-mega;
+  height: $size-icon-mega;
+}
+
+.icon--google-plus {
+  color: color('google-plus') #{'!important'};
+}
+
+.icon--facebook {
+  color: color('facebook') #{'!important'};
+}
+
+.icon--twitter {
+  color: color('twitter') #{'!important'};
+}

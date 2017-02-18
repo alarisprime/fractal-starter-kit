@@ -1,0 +1,11 @@
+<div class="form-element is-required">
+  <label class="form-element__label" {{#if id}}for="text-input-{{id}}"{{/if}}>
+    <abbr class="required" title="required">*</abbr> {{label}}
+  </label>
+  <div class="form-element__control">
+    <input {{#if id}}id="text-input-{{id}}"{{/if}} class="input" type="text" placeholder="{{placeholderText}}" value="{{value}}">
+  </div>
+  {{#if helpText}}
+    <div class="form-element__help{{#if helpTextModifier}} form-element__help--{{helpTextModifier}}{{/if}}">{{{helpText}}}</div>
+  {{/if}}
+</div>

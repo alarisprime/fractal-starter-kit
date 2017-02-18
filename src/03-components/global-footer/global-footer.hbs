@@ -1,0 +1,16 @@
+  <div class="global-footer">
+    <div class="global-footer__container">
+      <div class="global-footer__primary">
+        <h2 class="global-footer__header">{{ site.title }}</h2>
+        <div class="global-footer__nav">
+          {{render '@list--inline'}}
+        </div>
+      </div>
+      <div class="global-footer__secondary">
+        <ul class="list list--small list--inline-dot-separated">
+          <li>© {{year}} {{ site.company }}</li>
+          <li>Powered By <a href="http://fractal.build" class="link">Fractal</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>

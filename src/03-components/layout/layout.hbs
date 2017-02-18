@@ -1,0 +1,7 @@
+<div class="layout{{#each modifiers}} layout--{{this}}{{/each}}">
+  {{#times elements}}
+    <div class="layout__col{{#if ../columns.two}}-{{ @mod2Index}}{{/if}}{{#if ../columns.three}}-{{ @mod3Index}}{{/if}}">
+      <div class="dummy">Content</div>
+    </div>
+  {{/times}}
+</div>

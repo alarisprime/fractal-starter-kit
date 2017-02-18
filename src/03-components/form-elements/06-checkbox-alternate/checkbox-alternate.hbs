@@ -1,0 +1,15 @@
+<fieldset class="form-element">
+  <label class="form-element__label {{legendClass}}">{{legend}}</label>
+  <div class="form-element__control">
+    <div class="checkbox-button-group{{#each modifiers}} checkbox-button-group--{{this}}{{/each}}">
+      {{#each checkboxes}}
+        <span class="button checkbox--button">
+          <input name="{{../formName}}" type="checkbox" id="checkbox-{{id}}" value="{{id}}" {{#if checked}}checked{{/if}}/>
+          <label class="checkbox__label" for="checkbox-{{id}}">
+            <span class="checkbox--faux">{{label}}</span>
+          </label>
+        </span>
+      {{/each}}
+    </div>
+  </div>
+</fieldset>

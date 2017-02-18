@@ -1,0 +1,49 @@
+.select {
+  width: 100%;
+  padding-right: $space-m;
+  appearance: none;
+
+  &[multiple],
+  &[size] {
+    height: inherit;
+    min-height: 4 * $space-m;
+  }
+
+  &[multiple] {
+    padding-right: 0;
+    padding-left: 0;
+
+    option {
+      padding: $space-xs;
+      margin-top: 0;
+    }
+  }
+}
+
+.select__container {
+  position: relative;
+
+  &::after,
+  &::before {
+    position: absolute;
+    right: .5rem;
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+    content: '';
+  }
+
+  &::after { // top triangle
+    top: 50%;
+    border-bottom: 5px solid color('black');
+    transform: translate3d(0, -5px , 0);
+  }
+
+  &::before { // bottom triangle
+    top: 50%;
+    border-top: 5px solid color('black');
+    transform: translate3d(0, 3px , 0);
+  }
+}

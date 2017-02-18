@@ -1,0 +1,9 @@
+<div class="form-element">
+  <label class="form-element__label" {{#if id}}for="text-input-{{id}}"{{/if}}>{{label}}</label>
+  <div class="form-element__control">
+    <input {{#if id}}id="text-input-{{id}}"{{/if}} class="input" type="{{#if type}}{{type}}{{else}}text{{/if}}" placeholder="{{placeholderText}}" value="{{value}}">
+  </div>
+  {{#if helpText}}
+    <div class="form-element__help{{#if helpTextModifier}} form-element__help--{{helpTextModifier}}{{/if}}">{{{helpText}}}</div>
+  {{/if}}
+</div>

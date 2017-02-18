@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html class="{{#each _target.context.documentClassNames}} {{this}}{{/each}}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ path '/css/base.css' }}">
+    <link rel="stylesheet" href="{{ path '/css/styleguide.css' }}">
+    <title>{{ _target.title }}</title>
+</head>
+<body class="{{#unless _target.context.defaultBodyStyles}} sg-reset-bg{{/unless}}{{#each _target.context.bodyClassNames}} {{this}}{{/each}}">
+  <div style="height: 0; width: 0; position: absolute; visibility: hidden">
+    {{#> @icons }}{{/@icons}}
+  </div>
+  <div class="sg-wrapper">

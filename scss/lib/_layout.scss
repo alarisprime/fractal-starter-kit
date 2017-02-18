@@ -1,0 +1,56 @@
+@mixin container($bg-color: null) {
+  margin-top: 0;
+
+  @if ($bg-color) {
+    background-color: $bg-color;
+  }
+}
+
+@mixin inner-container(
+  $local-max-width:
+  $max-container-width,
+  $padding:
+  $space-xs,
+  $bg-color: null
+) {
+  @include clearfix;
+
+  width: 100%;
+  padding: $padding;
+  margin-right: auto;
+  margin-left: auto;
+
+  @if ($bg-color) {
+    background-color: $bg-color;
+  }
+
+  @include bp(medium) {
+    max-width: 93.75%; // (768px - 2 * 24px) / 768px
+    max-width: calc(100% - (#{$space-m}));
+  }
+
+  @include bp(large) {
+    max-width: 95.3125%; // (1024px - 2 * 24px) / 1024px
+    max-width: calc(100% - (#{$space-l}));
+  }
+
+  @include bp(xlarge) {
+    max-width: $local-max-width;
+  }
+}
+
+@mixin spacing($attribute: 'padding', $small: $space-s, $medium: $space-m) {
+  #{$attribute}: $small;
+
+  @include bp(medium) {
+    #{$attribute}: $medium;
+  }
+}
+
+@mixin padding($small: $space-s, $medium: $space-m) {
+  @include spacing($small: $small, $medium: $medium);
+}
+
+@mixin margin($small: $space-s, $medium: $space-m) {
+  @include spacing($attribute: 'margin', $small: $small, $medium: $medium);
+}

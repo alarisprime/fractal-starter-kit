@@ -1,0 +1,54 @@
+{
+  "name": "fractal-starter-kit",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp",
+    "qgen": "qgen"
+  },
+  "private": true,
+  "license": "MIT",
+  "author": "Saneef Ansari <saneef@alarisprime.com> (https://alarisprime.com)",
+  "dependencies": {
+    "@frctl/fractal": "^1.0.11",
+    "@frctl/mandelbrot": "^1.0.7",
+    "accoutrement-color": "^2.0.1",
+    "accoutrement-herman": "^1.0.0-alpha.4",
+    "autoprefixer": "^6.6.0",
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "bourbon": "^4.2.7",
+    "cssnano": "^3.9.1",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-cli": "^1.2.2",
+    "gulp-filenames": "^4.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sass-lint": "^1.3.2",
+    "gulp-sourcemaps": "^2.0.1",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-util": "^3.0.8",
+    "gulp-xo": "^0.14.0",
+    "sanitize.css": "^4.1.0",
+    "sass-json-export": "^2.0.0",
+    "spinthatshit": "^1.0.3",
+    "webpack": "^1.14.0"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ]
+  },
+  "devDependencies": {
+    "qgen": "^1.1.3"
+  }
+}

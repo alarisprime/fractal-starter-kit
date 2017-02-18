@@ -1,0 +1,42 @@
+@mixin badge-variant(
+  $color-text: color('text'),
+  $color-background: color('grey-tint-80')
+) {
+  color: $color-text;
+  background-color: $color-background;
+}
+
+.badge {
+  @include to-uppercase(modular-scale(-1), .9);
+  @include badge-variant;
+  position: relative;
+  top: -1 * em(2);
+  display: inline-block;
+  padding: 0 $space-xs;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: $border-radius-badge;
+  user-select: select;
+}
+
+.badge--danger {
+  @include badge-variant(color('white'), color('danger'));
+}
+
+.badge--info {
+  @include badge-variant(color('white'), color('info'));
+}
+
+.badge--success {
+  @include badge-variant(color('white'), color('success'));
+}
+
+.badge--warning {
+  @include badge-variant(color('white'), color('warning'));
+}
+
+.badge--brand {
+  @include badge-variant(color('white'), color('accent'));
+}

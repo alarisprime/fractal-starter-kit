@@ -1,0 +1,5 @@
+<ul class="menu menu--horizontal{{#each modifiers}} menu--{{this}}{{/each}}">
+  {{#each menuItems}}
+    {{> @menu-item this}}
+  {{/each}}
+</ul>

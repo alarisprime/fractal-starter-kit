@@ -1,0 +1,13 @@
+<div class="form-element is-required has-error">
+  <label class="form-element__label" for="select-{{id}}">
+    <abbr class="required" title="required">*</abbr> {{label}}
+  </label>
+  <div class="form-element__control">
+    <div class="select__container">
+      <select id="select-{{id}}" class="select">
+        {{> @select-options}}
+      </select>
+    </div>
+  </div>
+  <div id="error-message" class="form-element__help">This field is required</div>
+</div>

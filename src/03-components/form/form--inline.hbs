@@ -1,0 +1,7 @@
+<div class="form form--inline{{#each modifiers}} form--{{this}}{{/each}}">
+  {{render '@input'}}
+  {{render '@input' input2 merge=true }}
+  <div class="form-element">
+    <button class="button button--neutral button--small" type="button">Send</button>
+  </div>
+</div>

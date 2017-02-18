@@ -1,0 +1,52 @@
+.global-footer {
+  @include container($bg-color: color('grey-shade-50'));
+  color: color('text-reverse');
+
+  a {
+    color: color('link-reverse');
+
+    @include link-pseudo-classes {
+      color: color('link-reverse-hover');
+    }
+  }
+}
+
+.global-footer__container {
+  @include inner-container($padding: null);
+}
+
+.global-footer__primary,
+.global-footer__secondary {
+  @include clearfix;
+}
+
+.global-footer__secondary,
+.global-footer__header,
+.global-footer__nav {
+  padding: $space-s;
+}
+
+.global-footer__header,
+.global-footer__nav {
+  @include bp(medium) {
+    float: left;
+  }
+}
+
+.global-footer__header {
+  @include bp(medium) {
+    width: percentage(1 / 3);
+  }
+}
+
+.global-footer__nav {
+  margin-top: 0;
+  @include bp(medium) {
+    width: percentage(2 / 3);
+  }
+}
+
+.global-footer__secondary {
+  margin-top: 0;
+  border-top: $border-reverse;
+}

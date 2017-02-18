@@ -1,0 +1,15 @@
+.counter {
+  position: relative;
+  display: inline-block;
+  padding: 0 $space-xs;
+  margin: 0;
+  font-size: 1rem * strip-units(modular-scale(-2));
+  font-weight: $font-weight-bold;
+  line-height: $line-height-small;
+  color: color('white');
+  white-space: nowrap;
+  vertical-align: text-bottom;
+  background-color: color('danger');
+  border-radius: $border-radius-semi-circle;
+  user-select: select;
+}

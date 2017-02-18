@@ -1,0 +1,45 @@
+.pill {
+  @include clearfix;
+  display: inline-block;
+  margin-top: 0;
+  font-size: 1rem * strip-units(modular-scale(0));
+  line-height: $line-height;
+  vertical-align: middle;
+  border: $border-width $border-style color('link');
+  border-radius: $border-radius;
+
+  * + * {
+    margin-top: 0;
+  }
+}
+
+.pill__body,
+.pill__remove,
+.pill__type-icon,
+.pill__label {
+  display: inline-block;
+  float: left;
+}
+
+.pill__label {
+  font-size: 1rem * strip-units(modular-scale(-1));
+  line-height: inherit;
+}
+
+.pill__remove,
+.pill__label {
+  padding: 0 $space-xs;
+}
+
+.pill__type-icon {
+  padding-left: $space-xs;
+}
+
+.pill__remove {
+  margin-left: -1 * $space-xs;
+  color: color('danger');
+
+  @include link-pseudo-classes {
+    color: shade(color('danger'), 15%);
+  }
+}

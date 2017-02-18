@@ -1,0 +1,12 @@
+<div class="form-element is-required">
+  <div class="form-element__control">
+    <span class="checkbox">
+      <abbr class="required" title="required">*</abbr>
+      <input type="checkbox" id="checkbox-{{id}}" name="{{formName}}" {{#if checked}}checked{{/if}}>
+      <label class="checkbox__label" for="checkbox-{{id}}">
+        <span class="checkbox--faux"></span>
+        <span class="form-element__label">{{label}}</span>
+      </label>
+    </span>
+  </div>
+</div>

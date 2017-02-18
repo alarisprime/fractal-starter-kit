@@ -1,0 +1,31 @@
+@mixin chevron-direction($direction: 'down') {
+  @if ($direction == 'top') {
+    transform: translate3d(0, 50% , 0) rotate(135deg);
+  } @else if ($direction == 'right') {
+    transform: translate3d(0, 50% , 0) rotate(-135deg);
+  } @else if ($direction == 'left') {
+    transform: translate3d(0, 50% , 0) rotate(45deg);
+  } @else {
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin chevron-size($size: $size-chevron) {
+  width: $size;
+  height: $size;
+}
+
+@mixin chevron(
+  $size: $size-chevron,
+  $border-width: $border-width-chevron,
+  $color: currentColor,
+  $direction: 'down'
+) {
+  @include chevron-direction($direction);
+  @include chevron-size($size);
+
+  background-color: transparent;
+  border: $border-width solid $color;
+  border-top-width: 0;
+  border-right-width: 0;
+}

@@ -37,7 +37,7 @@
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
     "gulp-util": "^3.0.8",
-    "gulp-xo": "^0.14.0",
+    "gulp-xo": "^0.15.0",
     "sanitize.css": "^5.0.0",
     "sass-json-export": "^2.0.0",
     "spinthatshit": "^1.0.3",

@@ -28,7 +28,7 @@
     "gulp-filenames": "^4.0.1",
     "gulp-if": "^2.0.2",
     "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.3.0",
+    "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sass-glob": "^1.0.8",

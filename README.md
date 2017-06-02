@@ -1,5 +1,7 @@
 # Fractal Starter Kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/alarisprime/fractal-starter-kit.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/alarisprime/fractal-starter-kit.svg?branch=master)](https://travis-ci.org/alarisprime/fractal-starter-kit)
 
 ## Getting Started
